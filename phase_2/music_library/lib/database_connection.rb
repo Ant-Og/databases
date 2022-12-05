@@ -9,9 +9,7 @@ class DatabaseConnection
   # PG gem. We connect to 127.0.0.1, and select
   # the database name given in argument.
   def self.connect(database_name)
-    user = 'anthonylinux'
-    password = 'password'
-    @connection = PG.connect({ host: '127.0.0.1', port: 5432, dbname: database_name, user: user, password: password })
+    @connection = PG.connect({ host: '127.0.0.1', dbname: database_name })
   end
 
   # This method executes an SQL query 
