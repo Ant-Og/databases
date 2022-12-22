@@ -21,18 +21,10 @@ RSpec.describe ArtistRepository do
     expect(artist.first.name).to eq('Kendrick Lamar')
   end
 
-  it 'returns kendrick Lamar as single artist' do
-    repo = ArtistRepository.new
-    artist = repo.find(1)
-    
-    expect(artist.name).to eq('Kendrick Lamar')
-    expect(artist.genre).to eq('Rap')
-  end
-
   it 'returns Nas as single artist' do
     repo = ArtistRepository.new
     artist = repo.find(2)
-    
+
     expect(artist.name).to eq('Nas')
     expect(artist.genre).to eq('Rap')
   end
